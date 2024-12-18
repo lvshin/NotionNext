@@ -20,9 +20,6 @@ const BlogPostListPage = ({ page = 1, posts = [], postCount, siteInfo }) => {
   if (!posts || posts.length === 0 || page > totalPage) {
     return <BlogPostListEmpty />
   } else {
-    posts = posts.sort((a, b) => {
-      return new Date(b.publishDate) - new Date(a.publishDate)
-    })
     return (
       <div id='container' className='w-full'>
         {/* 文章列表 */}

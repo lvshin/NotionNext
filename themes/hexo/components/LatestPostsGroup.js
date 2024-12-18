@@ -19,6 +19,10 @@ const LatestPostsGroup = ({ latestPosts, siteInfo }) => {
     return <></>
   }
 
+  latestPosts = latestPosts.sort((a, b) => {
+    return new Date(b.publishDate) - new Date(a.publishDate)
+  })
+
   return (
     <>
       <div className=' mb-2 px-1 flex flex-nowrap justify-between'>
