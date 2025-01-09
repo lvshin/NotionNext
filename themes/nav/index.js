@@ -292,13 +292,6 @@ const LayoutSlug = props => {
           {post && (
             <section className='px-1'>
               <div id='article-wrapper'>
-                {post.js && (
-                  <script
-                    dangerouslySetInnerHTML={{
-                      __html: post?.js
-                    }}
-                  />
-                )}
                 <NotionPage post={post} />
               </div>
 

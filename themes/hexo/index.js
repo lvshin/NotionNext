@@ -293,6 +293,13 @@ const LayoutSlug = props => {
               itemScope
               itemType='https://schema.org/Movie'
               className='subpixel-antialiased overflow-y-hidden'>
+              {post.js && (
+                <script
+                  dangerouslySetInnerHTML={{
+                    __html: post?.js
+                  }}
+                />
+              )}
               {/* Notion文章主体 */}
               <section className='px-5 justify-center mx-auto max-w-2xl lg:max-w-full'>
                 {post && <NotionPage post={post} />}
