@@ -247,9 +247,18 @@ const LayoutSlug = props => {
         {lock && <ArticleLock validPassword={validPassword} />}
 
         {!lock && post && (
+
           <div
             id='article-wrapper'
             className='overflow-x-auto flex-grow mx-auto md:w-full md:px-5 '>
+            {post.js && (
+              <script
+                dangerouslySetInnerHTML={{
+                  __html: post?.js
+                }}
+              />
+            )}
+
             {/* 预览区块 */}
 
             {post?.type === 'Post' && (
